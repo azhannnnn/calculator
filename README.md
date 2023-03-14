@@ -4,4 +4,4 @@ Basic functionality calculator using flutter framework.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.![Screenshot_1678771429](https://user-images.githubusercontent.com/117432949/224914494-931f6131-4591-42d6-8c8f-0f67eaba7c11.png)
+![Screenshot_1678808272](https://user-images.githubusercontent.com/117432949/225055281-99540450-a875-4e69-b46a-2c5e3cc9ea8e.png)

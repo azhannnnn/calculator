@@ -29,11 +29,13 @@ class _MyappState extends State<Myapp> {
     if (value == "AC") {
       input = "";
       output = "";
-    } else if (value == "<") {
+    } else if (value == "DEL") {
       if (input.isNotEmpty) {
         input = input.substring(0, input.length - 1);
       }
-    } else if (value == "=") {
+    }
+   
+     else if (value == "=") {
       if (input.isNotEmpty) {
         var userinput = input;
         userinput = input.replaceAll("x", "*");
@@ -98,41 +100,41 @@ class _MyappState extends State<Myapp> {
           children: [
             button(
                 text: "AC", buttonbgColor: Colors.grey, tColor: Colors.black),
-            button(text: "<", buttonbgColor: Colors.grey, tColor: Colors.black),
+            button(text: "DEL", buttonbgColor: Colors.grey, tColor: Colors.black),
             button(text: "%", buttonbgColor: Colors.grey, tColor: Colors.black),
-            button(text: "/", buttonbgColor: Colors.teal),
+            button(text: "/", buttonbgColor: Colors.deepPurple),
           ],
         ),
         Row(
           children: [
-            button(text: "7"),
-            button(text: "8"),
-            button(text: "9"),
-            button(text: "x", buttonbgColor: Colors.teal),
+            button(text: "7",buttonbgColor: operatorColor),
+            button(text: "8",buttonbgColor: operatorColor),
+            button(text: "9",buttonbgColor: operatorColor),
+            button(text: "x", buttonbgColor: Colors.deepPurple),
           ],
         ),
         Row(
           children: [
-            button(text: "4"),
-            button(text: "5"),
-            button(text: "6"),
-            button(text: "-", buttonbgColor: Colors.teal),
+            button(text: "4",buttonbgColor: operatorColor),
+            button(text: "5",buttonbgColor: operatorColor),
+            button(text: "6",buttonbgColor: operatorColor),
+            button(text: "-", buttonbgColor: Colors.deepPurple),
           ],
         ),
         Row(
           children: [
-            button(text: "1"),
-            button(text: "2"),
-            button(text: "3"),
-            button(text: "+", buttonbgColor: Colors.teal),
+            button(text: "1",buttonbgColor: operatorColor),
+            button(text: "2",buttonbgColor: operatorColor),
+            button(text: "3",buttonbgColor: operatorColor),
+            button(text: "+", buttonbgColor: Colors.deepPurple),
           ],
         ),
         Row(
           children: [
-            button(text: ""),
-            button(text: "0"),
-            button(text: "."),
-            button(text: "=", buttonbgColor: Colors.teal),
+            button(text: "00",buttonbgColor: operatorColor),
+            button(text: "0",buttonbgColor: operatorColor),
+            button(text: ".",buttonbgColor: operatorColor),
+            button(text: "=", buttonbgColor: Colors.deepPurple),
           ],
         ),
       ]),
@@ -142,20 +144,20 @@ class _MyappState extends State<Myapp> {
   Widget button({text, tColor = Colors.white, buttonbgColor = buttonColor}) {
     return Expanded(
         child: Container(
-      margin: EdgeInsets.all(8),
+      margin: EdgeInsets.all(3),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
             shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
-            padding: EdgeInsets.all(22),
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+            padding: EdgeInsets.all(18),
             primary: buttonbgColor),
         onPressed: () => onButtonClick(text),
         child: Text(
           text,
           style: TextStyle(
-            fontSize: 35,
+            fontSize: 34,
             color: tColor,
-            fontWeight: FontWeight.bold,
+            fontWeight: FontWeight.w500,
           ),
         ),
       ),
